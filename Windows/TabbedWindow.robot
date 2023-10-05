@@ -9,14 +9,17 @@ TabbedWindow
     Open Browser    https://testautomationpractice.blogspot.com/    chrome
     click button    //button[normalize-space()='New Browser Window']
     Maximize Browser Window
-    set selenium speed      3 seconds
+    set selenium speed      2 seconds
 
-    ${getwindowtitle}   Get Window Title
+    ${getwindowtitle}   Get Window Titles
     log to console  ${getwindowtitle}
 
-    Switch Window   title=Your Store
+    Switch Window   title=Automation Testing Practice
 
-     ${getwindowtitle}   Get Window Title
+     ${getwindowtitle}   Get Window Titles
     log to console  ${getwindowtitle}
 
-    click link  //a[normalize-space()='Desktops']
+    input text   xpath://input[@id='name']      Karthik
+
+    #Close window
+    Close Window
