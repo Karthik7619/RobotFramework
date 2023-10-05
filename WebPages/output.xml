@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.4 on darwin)" generated="20231005 07:18:14.542" rpa="false" schemaversion="4">
+<suite id="s1" name="Webpage" source="/Users/karthikeyanm/RobotFrameworkProject/WebPages/webpage.robot">
+<test id="s1-t1" name="SelectElements" line="7">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://only-testing-blog.blogspot.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231005 07:18:15.047" level="INFO">Opening browser 'chrome' to base url 'https://only-testing-blog.blogspot.com/'.</msg>
+<status status="PASS" starttime="20231005 07:18:15.047" endtime="20231005 07:18:22.070"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231005 07:18:22.071" endtime="20231005 07:18:22.508"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>2 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20231005 07:18:22.509" endtime="20231005 07:18:22.510"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>xpath:(//select)[13]</arg>
+<arg>Singapore</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20231005 07:18:22.512" level="INFO">Selecting options from selection list 'xpath:(//select)[13]' by value Singapore.</msg>
+<status status="PASS" starttime="20231005 07:18:22.510" endtime="20231005 07:18:38.692"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231005 07:18:40.695" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231005 07:18:38.693" endtime="20231005 07:18:40.695"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>xpath:(//select)[13]</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20231005 07:18:40.696" level="INFO">Selecting options from selection list 'xpath:(//select)[13]' by index 3.</msg>
+<status status="PASS" starttime="20231005 07:18:40.695" endtime="20231005 07:19:04.945"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231005 07:19:06.948" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231005 07:19:04.946" endtime="20231005 07:19:06.948"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>xpath:(//select)[13]</arg>
+<arg>Saab</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20231005 07:19:06.950" level="INFO">Selecting options from selection list 'xpath:(//select)[13]' by label Saab.</msg>
+<status status="PASS" starttime="20231005 07:19:06.949" endtime="20231005 07:19:23.112"/>
+</kw>
+<status status="PASS" starttime="20231005 07:18:15.045" endtime="20231005 07:19:23.112"/>
+</test>
+<status status="PASS" starttime="20231005 07:18:14.545" endtime="20231005 07:19:23.114"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Webpage">Webpage</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
