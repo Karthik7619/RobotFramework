@@ -16,10 +16,13 @@ InputBox
 
     element should be visible   ${email_id}
     element should be enabled   ${email_id}
+#     element should not be visible     ${email_id}
 
     input text  ${email_id}     karthik.nexgen@gmail.com
+    Capture Page Screenshot     img1.png
     sleep   5s
     clear element text  ${email_id}
     sleep   5s
+    Capture Page Screenshot     img.png
     close browser
 
