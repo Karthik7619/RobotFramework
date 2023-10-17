@@ -19,6 +19,8 @@ TabbedWindow
     ${title}    get title
     log to console      ${title}
 
+    capture element screenshot  xpath://h1[normalize-space()='Automation Testing Practice']     logo.png
+
 #    #Clink New Browser
 #    click button    //button[normalize-space()='New Browser Window']
 #    Maximize Browser Window
@@ -53,6 +55,8 @@ TabbedWindow
 
     #Input Text
     input text   xpath://input[@id='name']      Karthik
+
+    capture page screenshot     automationpage.png
 
     #Close window
     Close browser
