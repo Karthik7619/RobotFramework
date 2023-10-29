@@ -7,8 +7,7 @@ Invoke Dashboard
     click element    ${link_dashboard}
 
 Expand Orders list
-#    click element   ${link_collapse}
-#    Sleep   10s
+    click element   ${link_collapse}
     click element   ${link_expand}
 
 Add Store Information
@@ -25,42 +24,44 @@ Input Store Name
 Input Store Url
     [Arguments]     ${Storeurl}
     clear element text  ${text_storeurl}
-    input text  ${Storeurl}     ${Storeurl}
+    input text  ${text_storeurl}     ${Storeurl}
 
-Click Save button
-    click button    ${button_save}
-    Sleep   2s
-    click button    ${button_savecontinue}
-    click element   ${mouseover_Basic}
-    Sleep   2s
-    click element   ${mouseover_advanced}
-    Sleep   2s
+#Click Save button
+#    click button    ${button_save}
+#    click button    ${button_savecontinue}
 
-Click Delete button
-    click element   ${button_Delete}
-    Handle alert    dismiss
-    Sleep   5s
-    click element   ${button_Delete}
-    Handle alert    accept
+MouseOver Basic and Advanced option
+#    Mouse Over      ${mouseover_Basic}
+#    Click Element   ${mouseover_Basic}
+    Wait Until Element is Visible   ${mouseover_Basic}
+    Sleep   2s
+    Execute JavaScript    arguments[0].scrollIntoView(true);    Get Element    ${mouseover_Basic}
+
+# Now you can interact with the element
+#    Sleep   2s
+#    Mouse Over      ${mouseover_advanced}
+#    Click Element   ${mouseover_advanced}
+
+#Click Delete button
+#    click element   ${button_Delete}
+#    Handle alert    dismiss
+#    click element   ${button_Delete}
+#    Handle alert    accept
 
 Get Today's Date
     ${TodayDate}    get text    ${gettext_todaydate}
-    log     Today's Date is: ${gettext_todaydate}
+    log to console     Today's Date is: ${gettext_todaydate}
 
 NopCommerce Version
     ${NopCommVersion}   get text    ${gettext_nopversion}
-    log     NopCommerceVersion: ${gettext_nopversion}
+    log to console     NopCommerceVersion: ${gettext_nopversion}
 
 NopCommerce Website
     click element       ${link_nopcommwebsite}
     SLeep   2s
-    title page should be    Free and open-source eCommerce platform. ASP.NET Core based shopping cart. - nopCommerce
+    title should be    Edit store details / nopCommerce administration
     Sleep   2s
 
-Close Browser
+Close Nocomm Browser
     close browser
-
-Back to store
-    click element   ${link_backtostore}
-
 
