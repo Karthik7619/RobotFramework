@@ -3,15 +3,26 @@ Library  SeleniumLibrary
 Resource  /Users/karthikeyanm/RobotFrameworkProject/DataDrivenFramework_LoginPage/Resources/Resources_LoginPage.robot
 Suite Setup  Invokenopcommerce
 #Suite Teardown  Close Browsers
-Test Template  Invalid Login
-Test Template  Valid Login
+#Test Template  Invalid Login
+#Test Template  Valid Login
 
 *** Test Cases ***
-EmptyPwd    admin@yourstore.com     ${EMPTY}
-InvalidPwd  admin@yourstore.com     admin1
-EmptyUser   ${EMPTY}    admin
-InvlidUser  admin@store.com         admin
+EmptyPwd
+    [Template]  Invalid Login
+    admin@yourstore.com     ${EMPTY}
 
+InvalidPwd
+    [Template]  Invalid Login
+    admin@yourstore.com     admin1
+
+#EmptyUser   ${EMPTY}    admin
+#InvalidUser  admin@store.com         admin
+#
+#[Template]  Valid Login
+#ValidUser   admin@yourstore.com    admin
+ValidPwd
+    [Template]  Valid Login
+    admin@yourstore.com     admin
 
 *** Keywords ***
 Invalid Login

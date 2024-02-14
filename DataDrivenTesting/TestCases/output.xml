@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.4 on darwin)" generated="20231220 19:50:24.474" rpa="false" schemaversion="4">
+<suite id="s1" name="LoginDDF1" source="/Users/karthikeyanm/RobotFrameworkProject/DataDrivenTesting/TestCases/LoginDDF1.robot">
+<kw name="StartTestCase" library="ResourcesDDF1" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231220 19:50:24.673" level="INFO">Opening browser 'Chrome' to base url 'https://admin-demo.nopcommerce.com/login?ReturnUrl=%2Fadmin%2F'.</msg>
+<status status="PASS" starttime="20231220 19:50:24.671" endtime="20231220 19:50:27.268"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231220 19:50:27.269" endtime="20231220 19:50:27.681"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>1s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20231220 19:50:27.682" endtime="20231220 19:50:27.682"/>
+</kw>
+<status status="PASS" starttime="20231220 19:50:24.671" endtime="20231220 19:50:27.682"/>
+</kw>
+<test id="s1-t1" name="Login nopcommerce - Invalid Password" line="16">
+<kw name="Invalid Login User">
+<arg>admin@yourstore.com</arg>
+<arg>admin1</arg>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${txt_username}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231220 19:50:27.685" endtime="20231220 19:50:29.765"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_username}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231220 19:50:29.767" level="INFO">Typing text 'admin@yourstore.com' into text field 'id:Email'.</msg>
+<status status="PASS" starttime="20231220 19:50:29.766" endtime="20231220 19:50:32.939"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${txt_password}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231220 19:50:32.939" endtime="20231220 19:50:35.017"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231220 19:50:35.018" level="INFO">Typing text 'admin1' into text field 'id:Password'.</msg>
+<status status="PASS" starttime="20231220 19:50:35.017" endtime="20231220 19:50:38.144"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://button[normalize-space()='Log in']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231220 19:50:38.146" level="INFO">Clicking element 'xpath://button[normalize-space()='Log in']'.</msg>
+<status status="PASS" starttime="20231220 19:50:38.145" endtime="20231220 19:50:41.331"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<var>${result}</var>
+<arg>Login was unsuccessful.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20231220 19:50:43.362" level="INFO">Current page contains text 'Login was unsuccessful.'.</msg>
+<msg timestamp="20231220 19:50:43.363" level="INFO">${result} = None</msg>
+<status status="PASS" starttime="20231220 19:50:41.331" endtime="20231220 19:50:43.363"/>
+</kw>
+<kw name="RunLogKeyword" library="ResourcesDDF1">
+<kw name="Log" library="BuiltIn">
+<arg>Test case is fail</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231220 19:50:43.364" level="INFO">Test case is fail</msg>
+<status status="PASS" starttime="20231220 19:50:43.364" endtime="20231220 19:50:43.364"/>
+</kw>
+<status status="PASS" starttime="20231220 19:50:43.363" endtime="20231220 19:50:43.364"/>
+</kw>
+<status status="PASS" starttime="20231220 19:50:27.685" endtime="20231220 19:50:43.364"/>
+</kw>
+<status status="PASS" starttime="20231220 19:50:27.683" endtime="20231220 19:50:43.365"/>
+</test>
+<kw name="CloseTestCase" library="ResourcesDDF1" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231220 19:50:43.367" endtime="20231220 19:50:44.497"/>
+</kw>
+<status status="PASS" starttime="20231220 19:50:43.366" endtime="20231220 19:50:44.497"/>
+</kw>
+<status status="PASS" starttime="20231220 19:50:24.477" endtime="20231220 19:50:44.497"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="LoginDDF1">LoginDDF1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -8,7 +8,7 @@ Resource  /Users/karthikeyanm/RobotFrameworkProject/PageObjectModel_Project/Reso
 
 *** Variables ***
 ${url}          https://admin-demo.nopcommerce.com/login
-${browser}      Chrome
+${browser}      chrome
 ${username}     admin@yourstore.com
 ${password}     admin
 ${Storename}    SarahFashionStore
